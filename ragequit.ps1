@@ -39,10 +39,23 @@ $tbicon.ContextMenu = $contextmenu
 $tbicon.contextMenu.MenuItems.AddRange($tb_right_exit)
 ######################
 
+function ForceKill {
+    Param(
+    [string]$ProcessName
+    )
+    Get-Process | Where-Object {$_.ProcessName -like "$ProcessName"} | Stop-Process
+}
 # the single-click magic
 $tbicon.Add_Click({					
 	If ($_.Button -eq [Windows.Forms.MouseButtons]::Left) {
-		Get-Process | Where-Object {$_.MainWindowTitle -ne "" -and "RageQuit"} | stop-process
+		Get-Process | Where-Object {$_.MainWindowTitle -ne "" -and "RageQuit"} | Where-Object {$_.ProcessName `
+        # manage the exceptions that won't be closed
+        -notlike "*explorer*"`
+        ############################################
+        } | stop-process
+        # force kill any other process
+        # ForceKill "*process_name*"
+        ##############################
 	}				
 })
 ########################
