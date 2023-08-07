@@ -4,13 +4,14 @@ A simple and configurable PowerShell script for Windows that allows you to close
 ## Requirements
 PowerShell 6.0+
 
+## Usage
+Extract `.zip` archive in an empty directory  
+Run `run.vbs` to launch RageQuit  
+(Optionally you can add run it on Windows Start-up)
+
 ## Configuring
 Changing the tray icon (at the moment only from any executable):  
 Edit line 24: ```$icon = [System.Drawing.Icon]::ExtractAssociatedIcon("<executable path>")```
-
-## Usage
-Run `run.vbs` to launch RageQuit
-(Optionally you can add run it on Windows Start-up)
 
 ## Credits
 [Hiding cmd window](https://stackoverflow.com/questions/13142603/prevent-vbscript-app-from-showing-console-window)  
