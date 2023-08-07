@@ -5,7 +5,7 @@ A simple and configurable PowerShell script for Windows that allows you to close
 PowerShell 6.0+
 
 ## Configuring
-Changing the icon (at the moment only from any executable):
+Changing the icon (at the moment only from any executable):  
 Edit line 24: ```$icon = [System.Drawing.Icon]::ExtractAssociatedIcon("<executable path>")```
 
 ## Usage
