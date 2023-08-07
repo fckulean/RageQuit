@@ -13,6 +13,6 @@ Run `run.vbs` to launch RageQuit
 (Optionally you can add run it on Windows Start-up)
 
 ## Credits
-[Hiding cmd window](https://stackoverflow.com/questions/13142603/prevent-vbscript-app-from-showing-console-window)
-[Tray icon](https://www.systanddeploy.com/2018/12/create-your-own-powershell.html)
+[Hiding cmd window](https://stackoverflow.com/questions/13142603/prevent-vbscript-app-from-showing-console-window)  
+[Tray icon](https://www.systanddeploy.com/2018/12/create-your-own-powershell.html)  
 [MahApps.Metro framework](https://github.com/MahApps/MahApps.Metro)
